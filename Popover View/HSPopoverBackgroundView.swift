@@ -12,21 +12,22 @@ class HSPopoverBackgroundView: UIPopoverBackgroundView {
     let CONTENT_INSET:CGFloat = 10.0
     let CAP_INSET:CGFloat = 25.0
     let ARROW_BASE:CGFloat = 25.0
-    let ARROW_HEIGHT:CGFloat = 25.0
     let BORDER_WIDTH:CGFloat = 2.0//ボーダーの太さ
     
-    let arrowView = UIImageView(image: UIImage(named: "arrow_red"))
+    let arrowView:SpeechBalloonArrowView
     let backgroundView = UIView(frame: CGRectMake(0, 0, 0, 0))
     
     var _arrowOffset:CGFloat = 0
     var _arrowDirection:UIPopoverArrowDirection = UIPopoverArrowDirection.Any
     
     override init(frame: CGRect) {
+        self.arrowView = SpeechBalloonArrowView(width:25, height:20, borderWidth:BORDER_WIDTH)
+
         super.init(frame: frame)
         self.backgroundView.backgroundColor = UIColor.whiteColor()
         self.backgroundView.layer.cornerRadius = 10.0
         self.backgroundView.layer.borderColor = UIColor.redColor().CGColor
-        self.backgroundView.layer.borderWidth = 2.0
+        self.backgroundView.layer.borderWidth = BORDER_WIDTH
         self.backgroundView.clipsToBounds = true
         self.addSubview(self.backgroundView)
         self.addSubview(self.arrowView)
@@ -81,33 +82,33 @@ class HSPopoverBackgroundView: UIPopoverBackgroundView {
         
         switch (self.arrowDirection) {
         case UIPopoverArrowDirection.Up:
-            top += ARROW_HEIGHT - BORDER_WIDTH;
-            height -= ARROW_HEIGHT;
+            top += arrowView.arrowHeight - BORDER_WIDTH;
+            height -= arrowView.arrowHeight;
             coordinate = ((self.frame.size.width / 2) + self.arrowOffset) - (ARROW_BASE/2);
-            self.arrowView.frame = CGRectMake(coordinate, 0, ARROW_BASE, ARROW_HEIGHT);
+            self.arrowView.frame = CGRectMake(coordinate, 0, ARROW_BASE, arrowView.arrowHeight);
             break;
             
             
         case UIPopoverArrowDirection.Down:
             top += BORDER_WIDTH;
-            height -= ARROW_HEIGHT;
+            height -= arrowView.arrowHeight;
             coordinate = ((self.frame.size.width / 2) + self.arrowOffset) - (ARROW_BASE/2);
-            arrowView.frame = CGRectMake(coordinate, height, ARROW_BASE, ARROW_HEIGHT);
+            arrowView.frame = CGRectMake(coordinate, height, ARROW_BASE, arrowView.arrowHeight);
             rotation = CGAffineTransformMakeRotation( CGFloat (M_PI) );
             break;
             
         case UIPopoverArrowDirection.Left:
             left += ARROW_BASE;
             width -= ARROW_BASE;
-            coordinate = ((self.frame.size.height / 2) + self.arrowOffset) - (ARROW_HEIGHT/2);
-            arrowView.frame = CGRectMake(0, coordinate, ARROW_BASE, ARROW_HEIGHT);
+            coordinate = ((self.frame.size.height / 2) + self.arrowOffset) - (arrowView.arrowHeight/2);
+            arrowView.frame = CGRectMake(0, coordinate, ARROW_BASE, arrowView.arrowHeight);
             rotation = CGAffineTransformMakeRotation( -1 * CGFloat (M_PI_2) );
             break;
             
         case UIPopoverArrowDirection.Right:
             width -= ARROW_BASE;
-            coordinate = ((self.frame.size.height / 2) + self.arrowOffset) - (ARROW_HEIGHT/2);
-            arrowView.frame = CGRectMake(width, coordinate, ARROW_BASE, ARROW_HEIGHT);
+            coordinate = ((self.frame.size.height / 2) + self.arrowOffset) - (arrowView.arrowHeight/2);
+            arrowView.frame = CGRectMake(width, coordinate, ARROW_BASE, arrowView.arrowHeight);
             rotation = CGAffineTransformMakeRotation( CGFloat (M_PI_2) );
             
             break;

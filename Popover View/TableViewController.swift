@@ -16,6 +16,7 @@ class TableViewController: UITableViewController, UIPopoverPresentationControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         musicVideoList = ["Video 1","Video 2","Video 3","Video 4","Video 5"]
+        
     }
 
     override func didReceiveMemoryWarning() {
