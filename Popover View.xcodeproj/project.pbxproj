@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54F024961D0C22110087891C /* SpeechBalloonArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F024951D0C22110087891C /* SpeechBalloonArrowView.swift */; };
 		6543968F1D0BC427001547FC /* HSPopoverBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6543968E1D0BC427001547FC /* HSPopoverBackgroundView.swift */; };
+		654396911D0CFCF1001547FC /* SpeechBalloonArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654396901D0CFCF1001547FC /* SpeechBalloonArrowView.swift */; };
 		FF28021A1AB8C8FF0087E39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2802191AB8C8FF0087E39B /* AppDelegate.swift */; };
 		FF28021C1AB8C8FF0087E39B /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF28021B1AB8C8FF0087E39B /* PopoverViewController.swift */; };
 		FF28021F1AB8C8FF0087E39B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF28021D1AB8C8FF0087E39B /* Main.storyboard */; };
@@ -29,8 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		54F024951D0C22110087891C /* SpeechBalloonArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechBalloonArrowView.swift; path = ../SpeechBalloonArrowView.swift; sourceTree = "<group>"; };
 		6543968E1D0BC427001547FC /* HSPopoverBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSPopoverBackgroundView.swift; sourceTree = "<group>"; };
+		654396901D0CFCF1001547FC /* SpeechBalloonArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechBalloonArrowView.swift; sourceTree = "<group>"; };
 		FF2802141AB8C8FE0087E39B /* Popover View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Popover View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2802181AB8C8FF0087E39B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF2802191AB8C8FF0087E39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		FF2802161AB8C8FE0087E39B /* Popover View */ = {
 			isa = PBXGroup;
 			children = (
-				54F024951D0C22110087891C /* SpeechBalloonArrowView.swift */,
+				654396901D0CFCF1001547FC /* SpeechBalloonArrowView.swift */,
 				FF2802191AB8C8FF0087E39B /* AppDelegate.swift */,
 				FF28023B1AB8CA010087E39B /* TableViewController.swift */,
 				6543968E1D0BC427001547FC /* HSPopoverBackgroundView.swift */,
@@ -222,11 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654396911D0CFCF1001547FC /* SpeechBalloonArrowView.swift in Sources */,
 				FF28021C1AB8C8FF0087E39B /* PopoverViewController.swift in Sources */,
 				6543968F1D0BC427001547FC /* HSPopoverBackgroundView.swift in Sources */,
 				FF28023C1AB8CA010087E39B /* TableViewController.swift in Sources */,
 				FF28021A1AB8C8FF0087E39B /* AppDelegate.swift in Sources */,
-				54F024961D0C22110087891C /* SpeechBalloonArrowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
