@@ -1,6 +1,6 @@
 # BorderPopoverExample
 It was affected to the following url.<br/>
-http://theapplady.net/show-popover-view-via-tableview-cell/
+http://theapplady.net/show-popover-view-via-tableview-cell/ <br/>
 http://blog.teamtreehouse.com/customizing-the-design-of-uipopovercontroller
 
 
